@@ -1,6 +1,7 @@
 #!/bin/bash
 DIR=.
 
+#get requisites
 function get_requisites()
 {
 	sudo add-apt-repository ppa:phablet-team/tools
@@ -15,24 +16,51 @@ function get_requisites()
 	g++-4.8-multilib
 }
 
-
-function get_Ubuntu(){
+#fetch Ubuntu
+function get_ubuntu(){
 phablet-dev-bootstrap -c $DIR
 }
 
-function get_Combo(){
+#combo
+function get_combo(){
 source $DIR/build/envsetup.sh
 }
 
-function get_Lunch(){
+#lunch
+function get_lunch(){
 lunch
 }
 
-
-function setup(){
-get_Ubuntu
-get_Combo
-get_Lunch
+#git device sony
+function git_device(){
+git clone https://github.com/vic3t3chn0/sony_device.git $DIR/device/sony
 }
 
+#git kernel msm8974
+function git_kernel(){
+git clone https://github.com/vic3t3chn0/kernel_amami.git $DIR/kernel/sony/msm8974
+}
+
+#clean function
+function clobber(){
+ make clobber
+}
+
+#make function
+function mka(){
+make
+}
+
+#setup
+function setup(){
+get_ubuntu
+git_kernel
+git_device
+get_combo
+get_lunch
+clobber
+mka
+}
+
+#run
 setup
