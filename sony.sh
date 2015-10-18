@@ -28,9 +28,6 @@ function get_Lunch(){
 lunch
 }
 
-function enter_Ubuntu(){
-	phablet-dev-bootstrap -c .
-}
 
 function setup(){
 get_Ubuntu
