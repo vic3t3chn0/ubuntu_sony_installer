@@ -36,6 +36,10 @@ function git_device(){
 git clone https://github.com/vic3t3chn0/sony_device.git $DIR/device/sony
 }
 
+#git device sony
+function git_vendor(){
+git clone https://github.com/vic3t3chn0/proprietary_vendor_sony.git $DIR/vendor/sony
+}
 #git kernel msm8974
 function git_kernel(){
 git clone https://github.com/vic3t3chn0/kernel_amami.git $DIR/kernel/sony/msm8974
@@ -55,6 +59,7 @@ make
 function setup(){
 get_ubuntu
 git_kernel
+git_vendor
 git_device
 get_combo
 get_lunch
