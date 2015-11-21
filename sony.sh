@@ -33,7 +33,8 @@ lunch
 
 #git device sony
 function git_device(){
-git clone https://github.com/vic3t3chn0/sony_device.git $DIR/device/sony
+git clone https://github.com/vic3t3chn0/sony_device.git $DIR/device/
+mv device_sony sony
 }
 
 #git device sony
