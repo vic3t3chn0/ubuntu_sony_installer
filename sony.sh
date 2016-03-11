@@ -42,7 +42,7 @@ git clone https://github.com/vic3t3chn0/proprietary_vendor_sony.git $DIR/vendor/
 }
 #git kernel msm8974
 function git_kernel(){
-git clone https://github.com/vic3t3chn0/kernel_nmsm8974_sony.git $DIR/kernel/sony/msm8974
+git clone https://github.com/vic3t3chn0/msm8974_sony_ubuntu.git $DIR/kernel/sony/msm8974
 }
 
 #clean function
